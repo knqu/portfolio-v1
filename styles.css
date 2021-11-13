@@ -1,0 +1,351 @@
+/* 
+-------------------------
+css reset
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+license: none (public domain)
+-------------------------
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 
+-------------------------
+custom css
+------------------------- 
+*/
+
+:root {
+	/* colors */
+	--blurpleDark: #666cde;
+    --blurpleLight: #6492F5;
+	--lightRegular: #dfdfdf;
+	--lightDarker: #c9c9c9;
+    --lightDarkest: #999999;
+    --darkLighter: #2b2b2b;
+    --darkRegular: #1f1f1f;
+	--darkDarker: #121212;
+
+	/* linear gradient */
+	--gradient: linear-gradient(45deg, 
+		#8a66de,
+		#666cde, 
+		#6492F5,
+		#64b4f5,
+		#0fc4d1,
+		#0fd183);
+	
+	/* font sizes */
+	--fontUltraSmall: 16px;
+	--fontSmall: 24px;
+	--fontMedium: 38px;
+	--fontLarge: 50px;
+	--fontUltraLarge: 72px;
+}
+
+/* pseudo-elements */
+
+::selection {
+	background-color: var(--blurpleDark);
+}
+
+::-webkit-scrollbar {
+	background-color: var(--darkDarker);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--darkLighter);
+}
+
+::-webkit-scrollbar-thumb:active {
+	background-color:var(--lightDarkest);
+}
+
+/* elements */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Lato';
+	font-size: var(--fontSmall);
+	color: var(--lightRegular);
+	background-color: var(--darkRegular);
+}
+
+h1 {
+	font-family: 'Roboto Slab';
+	font-size: var(--fontUltraLarge);
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 24px;
+	user-select: none;
+	padding-top: 25vh;
+}
+
+h2 {
+	font-family: 'Roboto Slab';
+	font-size: var(--fontLarge);
+	font-weight: 600;
+	margin-bottom: 12px;
+	user-select: none;
+}
+
+p {
+	line-height: 1.15;
+	color: var(--lightDarker);
+}
+
+/* page sections */
+
+#fixedHeader {
+	height: 10vh;
+}
+
+main {
+	padding-top: 56px;
+}
+
+#landing {
+	height: 90vh;
+	background: var(--gradient);
+	background-size: 300%;
+	animation: bg-gradient-animation 20s infinite alternate;
+}
+
+@keyframes bg-gradient-animation {
+	0% {
+		background-position: left;
+	}
+	100% {
+		background-position: right;
+	}
+}
+
+#about, #works, #contact {
+	margin: 0 64px 56px 64px;
+	scroll-margin-top: 10vh;
+}
+
+details {
+	border: 2px solid var(--lightDarkest);
+	padding: 16px;
+	transition: background-color 500ms ease;
+}
+
+details[open] {
+	background-color: var(--darkLighter);
+	transition: background-color 500ms ease;
+}
+
+summary {
+	user-select: none;
+}
+
+/* main navbar */
+
+#mainNav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Roboto Slab';
+	background-color: var(--darkDarker);
+	height: 100%;
+}
+
+#mainNav a {
+	color: var(--lightDarker);
+	cursor: pointer;
+}
+
+#mainNav a:hover {
+	background-color: var(--darkLighter);
+	transition: background-color 50ms ease;
+}
+
+#mainNav .nav-item {
+	margin: 16px 0;
+	user-select: none;
+	display: flex;
+	align-items: center;
+}
+
+#mainNav .nav-link {
+	margin: 16px;
+}
+
+/* main footer */
+
+footer {
+	height: 15vh;
+	background-color: var(--darkDarker);
+	color: var(--lightDarkest);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--fontUltraSmall);
+	user-select: none;
+}
+
+/* text */
+
+.lead {
+	font-size: var(--fontMedium);
+	font-weight: 500;
+	text-align: center;
+	user-select: none;
+	color: var(--lightRegular);
+}
+
+/* contact form */
+
+form {
+	margin-top: 16px;
+}
+
+label {
+	font-family: 'Lato';
+	font-size: var(--fontUltraSmall);
+	margin-bottom: 6px;
+	font-weight: 500;
+	user-select: none;
+	color: var(--lightDarker);
+}
+
+/* for the following, '#contact' selector is used to override assigned bootstrap 'form-control' class (specificity) */
+#contact input, #contact textarea {
+	background-color: var(--darkRegular);
+	color: var(--lightRegular);
+	border: 2px solid var(--darkDarker);
+}
+
+#contact .form-row {
+	margin-bottom: 10px;
+}
+
+#contact .form-row:last-of-type {
+	margin-bottom: 0;
+}
+
+#contact input::placeholder, #contact textarea::placeholder {
+    color: var(--lightDarkest);
+}
+
+#contact textarea {
+	margin-bottom: 12px;
+}
+
+/* buttons */
+
+button, .button {
+	background: var(--gradient);
+	background-size: 300%;
+	color: var(--lightRegular);
+	font-family: 'Lato';
+	font-size: var(--fontUltraSmall);
+	padding: 16px 32px;
+	margin: 12px 0;
+	border-radius: 42px;
+	border: none;
+	text-transform: uppercase;
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button:hover {
+	opacity: 0.8;
+	transition: opacity 100ms ease-in;
+}
+
+button:active {
+	opacity: 0.7;
+	transition: opacity 100ms ease-in;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* submit modal (opened via js) */
+
+.modal-header {
+	border-bottom: 2px solid var(--blurpleLight);
+}
+
+.modal-title {
+	font-size: var(--fontMedium);
+	font-family: 'Roboto Slab';
+	font-weight: 500;
+}
+
+.modal-body {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	font-size: var(--fontSmall);
+}
+
+#submitModal .modal-content {
+	background-color: var(--darkLighter);
+	color: var(--lightRegular);
+	border: 2px solid var(--blurpleLight);
+}
+
+.modal-footer {
+	border-top: 2px solid var(--blurpleLight);
+	margin: 6px 0;
+}
+
+#modalCloseButton {
+	width: 100%;
+}
