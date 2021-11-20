@@ -14,6 +14,9 @@ const about = document.querySelector('#about');
 const works = document.querySelector('#works');
 const contact = document.querySelector('#contact');
 
+// theme toggler selectors
+const themeToggler = document.querySelector("#themeToggler");
+
 // form submission
 // blocks default behavior, closes details tag, shows bootstrap submit modal, scrolls to top, resets form
 
@@ -58,4 +61,43 @@ worksNavLink.addEventListener('click', function () {
 
 contactNavLink.addEventListener('click', function () {
     contact.scrollIntoView();
+});
+
+// toggles between dark and light theme
+themeToggler.addEventListener('click', function () {
+    if (window.getComputedStyle(document.documentElement).getPropertyValue('--blurpleDark') === '#666cde') {
+        document.querySelector('#themeTogglerSvg').src = 'svgs/moon.svg';
+        document.querySelector('#themeTogglerSvg').classList.remove('filterLight');
+        document.querySelector('#themeTogglerSvg').classList.add('filterDark');
+
+        document.documentElement.style.setProperty('--blurpleDark', '#6492F5');
+        document.documentElement.style.setProperty('--blurpleLight', '#666cde');
+
+        document.documentElement.style.setProperty('--lightLighter', '#121212');
+        document.documentElement.style.setProperty('--lightRegular', '#1f1f1f');
+        document.documentElement.style.setProperty('--lightDarker', '#2b2b2b');
+
+        document.documentElement.style.setProperty('--darkLighter', '#bdbdbd');
+        document.documentElement.style.setProperty('--darkRegular', '#c9c9c9');
+        document.documentElement.style.setProperty('--darkDarker', '#dfdfdf');
+    } else {
+        document.querySelector('#themeTogglerSvg').src = 'svgs/sun.svg';
+        document.querySelector('#themeTogglerSvg').classList.remove('filterDark');
+        document.querySelector('#themeTogglerSvg').classList.add('filterLight');
+
+        document.documentElement.style.setProperty('--blurpleDark', '#666cde');
+        document.documentElement.style.setProperty('--blurpleLight', '#6492F5');
+
+        document.documentElement.style.setProperty('--lightLighter', '#dfdfdf');
+        document.documentElement.style.setProperty('--lightRegular', '#c9c9c9');
+        document.documentElement.style.setProperty('--lightDarker', '#a3a2a2');
+
+        document.documentElement.style.setProperty('--darkLighter', '#2b2b2b');
+        document.documentElement.style.setProperty('--darkRegular', '#1f1f1f');
+        document.documentElement.style.setProperty('--darkDarker', '#121212');
+    }
+
+    document.querySelectorAll('button').forEach(function (el) {
+        el.style.color = "#dfdfdf";
+    });
 });

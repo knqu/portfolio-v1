@@ -65,14 +65,16 @@ custom css
 
 :root {
 	/* colors */
-	--blurpleDark: #666cde;
-    --blurpleLight: #6492F5;
-	--lightRegular: #dfdfdf;
-	--lightDarker: #c9c9c9;
-    --lightDarkest: #999999;
-    --darkLighter: #2b2b2b;
-    --darkRegular: #1f1f1f;
-	--darkDarker: #121212;
+	--blurpleDark:#666cde;
+    --blurpleLight:#6492F5;
+
+	--lightLighter:#dfdfdf;
+	--lightRegular:#c9c9c9;
+    --lightDarker:#a3a2a2;
+
+    --darkLighter:#2b2b2b;
+    --darkRegular:#1f1f1f;
+	--darkDarker:#121212;
 
 	/* linear gradient */
 	--gradient: linear-gradient(45deg, 
@@ -106,7 +108,7 @@ custom css
 }
 
 ::-webkit-scrollbar-thumb:active {
-	background-color:var(--lightDarkest);
+	background-color: var(--lightDarker);
 }
 
 /* elements */
@@ -118,7 +120,7 @@ html {
 body {
 	font-family: 'Lato';
 	font-size: var(--fontSmall);
-	color: var(--lightRegular);
+	color: var(--lightLighter);
 	background-color: var(--darkRegular);
 }
 
@@ -142,7 +144,7 @@ h2 {
 
 p {
 	line-height: 1.15;
-	color: var(--lightDarker);
+	color: var(--lightRegular);
 }
 
 /* page sections */
@@ -177,7 +179,7 @@ main {
 }
 
 details {
-	border: 2px solid var(--lightDarkest);
+	border: 2px solid var(--lightDarker);
 	padding: 16px;
 	transition: background-color 500ms ease;
 }
@@ -203,7 +205,7 @@ summary {
 }
 
 #mainNav a {
-	color: var(--lightDarker);
+	color: var(--lightRegular);
 	cursor: pointer;
 }
 
@@ -228,7 +230,7 @@ summary {
 footer {
 	height: 15vh;
 	background-color: var(--darkDarker);
-	color: var(--lightDarkest);
+	color: var(--lightDarker);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -243,7 +245,7 @@ footer {
 	font-weight: 500;
 	text-align: center;
 	user-select: none;
-	color: var(--lightRegular);
+	color: var(--lightLighter);
 }
 
 /* contact form */
@@ -258,13 +260,13 @@ label {
 	margin-bottom: 6px;
 	font-weight: 500;
 	user-select: none;
-	color: var(--lightDarker);
+	color: var(--lightRegular);
 }
 
 /* for the following, '#contact' selector is used to override assigned bootstrap 'form-control' class (specificity) */
 #contact input, #contact textarea {
 	background-color: var(--darkRegular);
-	color: var(--lightRegular);
+	color: var(--lightLighter);
 	border: 2px solid var(--darkDarker);
 }
 
@@ -277,7 +279,7 @@ label {
 }
 
 #contact input::placeholder, #contact textarea::placeholder {
-    color: var(--lightDarkest);
+    color: var(--lightDarker);
 }
 
 #contact textarea {
@@ -289,7 +291,7 @@ label {
 button, .button {
 	background: var(--gradient);
 	background-size: 300%;
-	color: var(--lightRegular);
+	color: var(--lightLighter);
 	font-family: 'Lato';
 	font-size: var(--fontUltraSmall);
 	padding: 16px 32px;
@@ -337,7 +339,7 @@ button:focus {
 
 #submitModal .modal-content {
 	background-color: var(--darkLighter);
-	color: var(--lightRegular);
+	color: var(--lightLighter);
 	border: 2px solid var(--blurpleLight);
 }
 
@@ -348,4 +350,39 @@ button:focus {
 
 #modalCloseButton {
 	width: 100%;
+}
+
+/* theme toggler */
+
+#themeToggler {
+	background: none;
+	width: 12px;
+	border-radius: 50%;
+	position: absolute;
+	left: 90%;
+}
+
+#themeToggler img {
+	height: 24px;
+	opacity: 0.8;
+	user-select: none;
+}
+
+#themeToggler:hover {
+	cursor: pointer;
+	opacity: 0.7;
+	transition: opacity 100ms ease-in;
+}
+
+#themeToggler:active {
+	opacity: 0.6;
+	transition: opacity 100ms ease-in;
+}
+
+.filterLight {
+	filter: invert(91%) sepia(0%) saturate(110%) hue-rotate(178deg) brightness(88%) contrast(98%);
+}
+
+.filterDark {
+	filter: invert(0%) sepia(6%) saturate(28%) hue-rotate(119deg) brightness(72%) contrast(76%);
 }
