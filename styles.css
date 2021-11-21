@@ -131,7 +131,7 @@ h1 {
 	text-align: center;
 	margin-bottom: 24px;
 	user-select: none;
-	padding-top: 25vh;
+	padding-top: 30vh;
 }
 
 h2 {
@@ -159,18 +159,9 @@ main {
 
 #landing {
 	height: 90vh;
-	background: var(--gradient);
-	background-size: 300%;
-	animation: bg-gradient-animation 20s infinite alternate;
-}
-
-@keyframes bg-gradient-animation {
-	0% {
-		background-position: left;
-	}
-	100% {
-		background-position: right;
-	}
+	background-image: url(images/planet.jpg);
+	/* image credit wallpapers.com: https://wallpapers.com/wallpapers/ultra-hd-4k-computer-background-image-916-ykmo9pq-high-resolution-sxgcbtrmn5jb9xno.html */
+	background-size: cover;
 }
 
 #about, #works, #contact {
@@ -288,6 +279,15 @@ label {
 
 /* buttons */
 
+@keyframes gradientAnimation {
+	0% {
+		background-position: left;
+	}
+	100% {
+		background-position: right;
+	}
+}
+
 button, .button {
 	background: var(--gradient);
 	background-size: 300%;
@@ -308,6 +308,9 @@ button, .button {
 button:hover {
 	opacity: 0.8;
 	transition: opacity 100ms ease-in;
+	background: var(--gradient);
+	background-size: 300%;
+	animation: gradientAnimation 15s infinite alternate;
 }
 
 button:active {

@@ -15,7 +15,7 @@ const works = document.querySelector('#works');
 const contact = document.querySelector('#contact');
 
 // theme toggler selectors
-const themeToggler = document.querySelector("#themeToggler");
+const themeToggler = document.querySelector('#themeToggler');
 
 // form submission
 // blocks default behavior, closes details tag, shows bootstrap submit modal, scrolls to top, resets form
@@ -66,22 +66,22 @@ contactNavLink.addEventListener('click', function () {
 // toggles between dark and light theme
 themeToggler.addEventListener('click', function () {
     if (window.getComputedStyle(document.documentElement).getPropertyValue('--blurpleDark') === '#666cde') {
-        document.querySelector('#themeTogglerSvg').src = 'svgs/moon.svg';
+        document.querySelector('#themeTogglerSvg').src = 'images/moon.svg';
         document.querySelector('#themeTogglerSvg').classList.remove('filterLight');
         document.querySelector('#themeTogglerSvg').classList.add('filterDark');
 
         document.documentElement.style.setProperty('--blurpleDark', '#6492F5');
         document.documentElement.style.setProperty('--blurpleLight', '#666cde');
 
-        document.documentElement.style.setProperty('--lightLighter', '#121212');
+        document.documentElement.style.setProperty('--lightLighter', '#2b2b2b');
         document.documentElement.style.setProperty('--lightRegular', '#1f1f1f');
-        document.documentElement.style.setProperty('--lightDarker', '#2b2b2b');
+        document.documentElement.style.setProperty('--lightDarker', '#121212');
 
-        document.documentElement.style.setProperty('--darkLighter', '#bdbdbd');
+        document.documentElement.style.setProperty('--darkLighter', '#dfdfdf');
         document.documentElement.style.setProperty('--darkRegular', '#c9c9c9');
-        document.documentElement.style.setProperty('--darkDarker', '#dfdfdf');
+        document.documentElement.style.setProperty('--darkDarker', '#a3a2a2');
     } else {
-        document.querySelector('#themeTogglerSvg').src = 'svgs/sun.svg';
+        document.querySelector('#themeTogglerSvg').src = 'images/sun.svg';
         document.querySelector('#themeTogglerSvg').classList.remove('filterDark');
         document.querySelector('#themeTogglerSvg').classList.add('filterLight');
 
@@ -97,7 +97,12 @@ themeToggler.addEventListener('click', function () {
         document.documentElement.style.setProperty('--darkDarker', '#121212');
     }
 
+    document.querySelector('h1').style.color = '#dfdfdf';
+    document.querySelectorAll('.lead').forEach(function (el) {
+        el.style.color = '#dfdfdf';
+    });
+
     document.querySelectorAll('button').forEach(function (el) {
-        el.style.color = "#dfdfdf";
+        el.style.color = '#dfdfdf';
     });
 });
