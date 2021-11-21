@@ -132,6 +132,7 @@ h1 {
 	margin-bottom: 24px;
 	user-select: none;
 	padding-top: 30vh;
+	text-shadow: 4px 4px 8px var(--blurpleLight);
 }
 
 h2 {
@@ -140,6 +141,7 @@ h2 {
 	font-weight: 600;
 	margin-bottom: 12px;
 	user-select: none;
+	text-shadow: 2px 2px 4px var(--blurpleDark);
 }
 
 p {

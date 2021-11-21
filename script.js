@@ -98,6 +98,8 @@ themeToggler.addEventListener('click', function () {
     }
 
     document.querySelector('h1').style.color = '#dfdfdf';
+    document.querySelector('h1').style.textShadow = '4px 4px 8px #6492F5';
+
     document.querySelectorAll('.lead').forEach(function (el) {
         el.style.color = '#dfdfdf';
     });
