@@ -130,9 +130,7 @@ h1 {
 	font-weight: 700;
 	text-align: center;
 	margin-bottom: 24px;
-	user-select: none;
 	padding-top: 30vh;
-	text-shadow: 4px 4px 8px var(--blurpleLight);
 }
 
 h2 {
@@ -140,8 +138,6 @@ h2 {
 	font-size: var(--fontLarge);
 	font-weight: 600;
 	margin-bottom: 12px;
-	user-select: none;
-	text-shadow: 2px 2px 4px var(--blurpleDark);
 }
 
 p {
@@ -161,8 +157,8 @@ main {
 
 #landing {
 	height: 90vh;
-	background-image: url(images/planet.jpg);
-	/* image credit wallpapers.com: https://wallpapers.com/wallpapers/ultra-hd-4k-computer-background-image-916-ykmo9pq-high-resolution-sxgcbtrmn5jb9xno.html */
+	background-image: url(images/space.jpg);
+	/* image credit wallpapers.com: https://wallpapers.com/wallpapers/dark-and-orange-galaxy-space-j8z7vu1w9jfbg4dg.html */
 	background-size: cover;
 }
 
@@ -228,7 +224,6 @@ footer {
 	justify-content: center;
 	align-items: center;
 	font-size: var(--fontUltraSmall);
-	user-select: none;
 }
 
 /* text */
@@ -237,7 +232,6 @@ footer {
 	font-size: var(--fontMedium);
 	font-weight: 500;
 	text-align: center;
-	user-select: none;
 	color: var(--lightLighter);
 }
 
