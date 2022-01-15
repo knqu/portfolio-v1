@@ -17,6 +17,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- custom css -->
     <link rel="stylesheet" href="styles.css">
@@ -34,123 +36,102 @@
                 display: none;
             }
 
+            #mainNav .navbar-nav {
+                display: none;
+            }
+
             details noscript p {
                 margin-top: 12px;
             }
 
-            #jsDisabledHeader {
-                height: 100%;
-                background-color: #da1818;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                user-select: none;
-            }
-
-            #jsDisabledHeader p {
+            #jsDisabled p {
                 color: #dfdfdf;
-                font-family: 'Roboto Slab';
+                font-family: 'Titillium Web';
                 font-weight: 500;
-            }
-
-            #mainNav {
-                display: none;
+                margin-top: 5vh;
             }
         </style>
     </noscript>
 </head>
 
 <body>
-    <header class="sticky-top" id="fixedHeader">
-        <!-- js disabled alert header -->
-        <noscript>
-            <div class="sticky-top" id="jsDisabledHeader">
-                <p>Due to JavaScript being disabled, some features of the site may not work as intended.</p>
-            </div>
-        </noscript>
-
+    <!-- landing page -->
+    <section id="landing">
         <!-- navbar -->
         <nav class="mainNav navbar navbar-expand-lg" id="mainNav">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" id="homeNavLink">home</a>
+                <a class="nav-item nav-link" id="homeNavLink">HOME</a>
                 <p class="nav-item">|</p>
-                <a class="nav-item nav-link" id="aboutNavLink">about</a>
+                <a class="nav-item nav-link" id="aboutNavLink">ABOUT</a>
                 <p class="nav-item">|</p>
-                <a class="nav-item nav-link" id="worksNavLink">works</a>
+                <a class="nav-item nav-link" id="worksNavLink">WORKS</a>
                 <p class="nav-item">|</p>
-                <a class="nav-item nav-link" id="contactNavLink">contact</a>
+                <a class="nav-item nav-link" id="contactNavLink">CONTACT</a>
             </div>
 
-            <!-- theme toggler -->
-            <button id="themeToggler">
-                <img id="themeTogglerSvg" src="images/sun.svg" alt="Theme toggle button" class="filterLight">
-                <!-- image credit font awesome: https://fontawesome.com/license -->
-            </button>
+            <noscript>
+                <div class="sticky-top" id="jsDisabled">
+                    <p>Due to JavaScript being disabled, some features of the site have been hidden.</p>
+                </div>
+            </noscript>
         </nav>
-    </header>
 
-    <!-- landing page -->
-    <section id="landing">
-        <h1>kevin qu | portfolio</h1>
-        <p class="lead">high school student learning web development and cybersecurity</p>
+        <div id="landingBox">
+            <h1>KEVIN QU</h1>
+            <p class="lead">student web developer</p>
+        </div>
     </section>
 
     <main>
         <!-- about section -->
         <section id="about">
-            <h2>about</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat iste et nobis porro, expedita, deleniti
-                doloribus nam error repudiandae veniam minus corporis dolore harum dolorum facere illo facilis, eos
-                aliquam?
-                Incidunt velit similique deleniti adipisci officiis fuga voluptatibus cupiditate, atque explicabo,
-                nesciunt rerum laborum repudiandae culpa unde ullam, voluptate obcaecati laboriosam? Eaque consequatur
-                nulla inventore accusamus culpa magnam sapiente sunt!
-                Autem harum dolorum omnis libero voluptatum, perferendis maiores nulla quidem impedit, odit rerum illum,
-                repudiandae earum est. Quibusdam ipsum tempora delectus quos! Sunt numquam corporis nulla rerum,
-                repellat quia assumenda.
-                Veniam quibusdam earum doloremque nulla voluptates? Corrupti recusandae doloremque ut deleniti nesciunt
-                debitis perferendis veniam maiores temporibus praesentium sapiente, placeat voluptas tempora nihil
-                deserunt velit, enim facere necessitatibus ad vel?
-                Reiciendis vel tenetur dolorem ad incidunt iure? Nihil accusamus culpa, voluptatem at voluptas minus
-                ratione obcaecati aut eveniet excepturi ipsa deleniti perferendis quae. Cumque, ea. Neque dolor quas
-                sapiente quia?</p>
+            <h2>ABOUT</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam ducimus aspernatur sit harum
+                asperiores animi neque eum aliquid voluptatibus, ullam dolorem recusandae! Ut facilis alias officiis
+                suscipit, est omnis rerum.
+                Officiis, voluptates alias. Iusto saepe rem laboriosam enim et porro, vero quidem ipsa possimus ab eaque
+                libero autem fugiat quasi qui minima iste animi dolorem maxime quo, inventore atque ullam.
+                Deleniti dolores ducimus itaque ex ad, nesciunt ipsa rerum magnam voluptatem officia minima animi
+                ratione delectus dolorem velit ab eligendi sit qui labore tenetur fugit exercitationem. At rerum ratione
+                a.
+                Numquam rerum esse accusamus a architecto aliquam laudantium. Fugit consequatur tenetur, ipsam
+                voluptatibus ex, ab cumque dolorem dicta nihil, reprehenderit dolor. Aut facilis quia quibusdam quaerat,
+                non incidunt! Quidem, ipsum.</p>
         </section>
 
         <!-- works section -->
         <section id="works">
-            <h2>works</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis quisquam consequuntur
-                quibusdam
-                nemo. Ipsam, voluptate vel ipsum voluptatibus ex, reiciendis laudantium dolorem nobis modi
-                quibusdam,
-                recusandae nulla non eum.
-                Omnis explicabo doloremque possimus atque soluta labore. Tempore est iste exercitationem excepturi,
-                quibusdam dignissimos sequi ratione reiciendis doloremque ab! Aspernatur, voluptas iusto quis
-                eveniet
-                eaque commodi ut natus. Eos, nemo!
-                Eius vero ratione a numquam! Perferendis incidunt atque voluptas! Quae cupiditate unde sapiente, cum
-                magni recusandae corporis aut suscipit itaque cumque perspiciatis incidunt consequuntur delectus
-                aspernatur! Aut vitae quas perferendis.
-                Repellat eum nesciunt architecto consectetur velit mollitia nobis voluptatibus pariatur esse
-                corrupti
-                ducimus assumenda odio ipsa laudantium harum, perferendis asperiores delectus aspernatur ipsum
-                laborum
-                aut porro maiores ex commodi. Eius.
-                Iusto perferendis repudiandae natus autem dolorem. Necessitatibus ab aliquid alias nesciunt totam
-                fuga
-                voluptates expedita ducimus illo doloremque velit maiores praesentium placeat veniam iure, est
-                mollitia
-                quaerat nemo a quae!</p>
+            <h2>WORKS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aperiam expedita esse, temporibus dolores
+                vero minima qui! Laboriosam quisquam dolore minima consequatur eaque, rerum officia vitae voluptatum
+                obcaecati consectetur quos.
+                Aliquam, inventore. Consequuntur dolorum reprehenderit at rem necessitatibus deserunt distinctio aliquid
+                eveniet consequatur perferendis earum quam ratione non accusamus neque iste tenetur perspiciatis numquam
+                fuga dignissimos id fugit, minima reiciendis.</p><br>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, sunt consectetur. Repudiandae optio,
+                modi esse maiores expedita, at officia, molestiae hic obcaecati ratione placeat voluptates accusamus
+                distinctio animi blanditiis? Quasi!
+                Eius cupiditate quis debitis ratione, necessitatibus reprehenderit laborum eligendi totam dolores fuga
+                possimus voluptatibus ad, ex ea aut exercitationem voluptate id. Similique quisquam, suscipit aut
+                delectus aliquid quibusdam commodi vitae!</p><br>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut error odio cum ducimus, architecto debitis
+                et nostrum alias consequatur, itaque sunt iste ullam commodi tenetur voluptate perspiciatis ratione
+                veniam quae.
+                Illum, dolorem! Perspiciatis omnis dolores deserunt animi quod ut unde alias suscipit maxime temporibus
+                provident velit quam ab beatae nesciunt aliquid sapiente, illo laboriosam aut modi tempore? Nisi, quia
+                eius.</p>
         </section>
 
         <!-- contact section -->
         <section id="contact">
-            <h2>contact</h2>
+            <h2>CONTACT</h2>
             <details>
                 <summary>Click to expand</summary>
 
                 <noscript>
-                    <p>Please enable JavaScript to be able to view the contact form.</p>
+                    <p>Javascript must be enabled to access the contact form.</p>
                 </noscript>
 
                 <!-- contact form -->
@@ -197,9 +178,9 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="modal-title">thanks!</h3>
+                        <h2 class="modal-title">SUCCESS</h2>
                     </div>
-                    <p class="modal-body">Your message has been sent.</p>
+                    <p class="modal-body">Thanks! Your message has been sent.</p>
                     <div class="modal-footer">
                         <form action="index.html#home"></form>
                         <button id="modalCloseButton" data-dismiss="modal">Okay</button>

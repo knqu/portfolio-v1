@@ -1,11 +1,11 @@
-/* 
--------------------------
-css reset
+/* -------------------------
+
+CSS RESET
 http://meyerweb.com/eric/tools/css/reset/ 
 v2.0 | 20110126
 license: none (public domain)
--------------------------
-*/
+
+------------------------- */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -57,24 +57,23 @@ table {
 	border-spacing: 0;
 }
 
-/* 
--------------------------
-custom css
-------------------------- 
-*/
+/* -------------------------
+
+CUSTOM CSS
+
+------------------------- */
 
 :root {
 	/* colors */
-	--blurpleDark:#666cde;
-    --blurpleLight:#6492F5;
-
-	--lightLighter:#dfdfdf;
-	--lightRegular:#c9c9c9;
-    --lightDarker:#a3a2a2;
-
-    --darkLighter:#2b2b2b;
-    --darkRegular:#1f1f1f;
-	--darkDarker:#121212;
+    --blurple1:#6492F5;
+	--blurple2:#666cde;
+    --blue1: #395788;
+	--light1:#dfdfdf;
+	--light2:#c9c9c9;
+    --light3:#a3a2a2;
+    --dark1:#2b2b2b;
+    --dark2:#1f1f1f;
+	--dark3:#121212;
 
 	/* linear gradient */
 	--gradient: linear-gradient(45deg, 
@@ -93,114 +92,137 @@ custom css
 	--fontUltraLarge: 72px;
 }
 
-/* pseudo-elements */
-
 ::selection {
-	background-color: var(--blurpleDark);
+	background-color: var(--blue1);
 }
 
 ::-webkit-scrollbar {
-	background-color: var(--darkDarker);
+	background-color: var(--dark3);
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: var(--darkLighter);
+	background-color: var(--dark1);
 }
 
 ::-webkit-scrollbar-thumb:active {
-	background-color: var(--lightDarker);
+	background-color: var(--light3);
 }
-
-/* elements */
 
 html {
 	scroll-behavior: smooth;
 }
 
 body {
-	font-family: 'Lato';
+	font-family: 'Titillium Web';
 	font-size: var(--fontSmall);
-	color: var(--lightLighter);
-	background-color: var(--darkRegular);
+	color: var(--light1);
+	background-color: var(--dark2);
 }
 
-h1 {
-	font-family: 'Roboto Slab';
-	font-size: var(--fontUltraLarge);
-	font-weight: 700;
-	text-align: center;
-	margin-bottom: 24px;
-	padding-top: 30vh;
+p {
+	line-height: 1.15;
+	color: var(--light2);
+}
+
+#about, #works, #contact {
+	padding: 64px;
 }
 
 h2 {
-	font-family: 'Roboto Slab';
 	font-size: var(--fontLarge);
 	font-weight: 600;
 	margin-bottom: 12px;
 }
 
-p {
-	line-height: 1.15;
-	color: var(--lightRegular);
+/* footer */
+
+footer {
+	height: 15vh;
+	background-color: var(--dark3);
+	color: var(--light3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--fontUltraSmall);
 }
 
-/* page sections */
+/* buttons */
 
-#fixedHeader {
-	height: 10vh;
+button, .button {
+	background: none;
+	color: var(--light1);
+	font-size: var(--fontUltraSmall);
+	padding: 16px 32px;
+	margin: 12px 0;
+	border: 1px solid var(--light2);
+	text-transform: uppercase;
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    outline: none;
 }
 
-main {
-	padding-top: 56px;
+button:hover, button:focus {
+    background-color: var(--light2);
+    color: var(--dark2);
+    transition: all 200ms ease;
+}
+
+button:focus {
+    outline: none;
+    background-color: var(--light3);
+    color: var(--dark1);
+}
+
+/* -------------------------
+
+LANDING PAGE
+
+------------------------- */
+
+h1 {
+	font-size: var(--fontUltraLarge);
+	text-align: center;
+    font-weight: 700;
+    font-size: var(--fontUltraLarge);
+}
+
+.lead {
+	font-size: var(--fontMedium);
+	font-weight: 300;
+	text-align: center;
+	color: var(--light1);
+    margin-top: 24px;
 }
 
 #landing {
-	height: 90vh;
-	background-image: url(images/space.jpg);
-	/* image credit wallpapers.com: https://wallpapers.com/wallpapers/dark-and-orange-galaxy-space-j8z7vu1w9jfbg4dg.html */
+	height: 100vh;
+	background: url(images/sky.jpg);
 	background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
-#about, #works, #contact {
-	margin: 0 64px 56px 64px;
-	scroll-margin-top: 10vh;
+#landingBox {
+    border: 3px solid rgba(223, 223, 223, 0.8);
+    height: 60vh;
+    width: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10vh auto;
+    padding: 24px;
 }
 
-details {
-	border: 2px solid var(--lightDarker);
-	padding: 16px;
-	transition: background-color 500ms ease;
-}
-
-details[open] {
-	background-color: var(--darkLighter);
-	transition: background-color 500ms ease;
-}
-
-summary {
-	user-select: none;
-}
-
-/* main navbar */
+/* navbar */
 
 #mainNav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: 'Roboto Slab';
-	background-color: var(--darkDarker);
-	height: 100%;
-}
-
-#mainNav a {
-	color: var(--lightRegular);
-	cursor: pointer;
-}
-
-#mainNav a:hover {
-	background-color: var(--darkLighter);
-	transition: background-color 50ms ease;
+    background: none;
+    opacity: 0.9;
 }
 
 #mainNav .nav-item {
@@ -212,49 +234,95 @@ summary {
 
 #mainNav .nav-link {
 	margin: 16px;
+    color: var(--light2);
+	cursor: pointer;
+	position: relative;
 }
 
-/* main footer */
-
-footer {
-	height: 15vh;
-	background-color: var(--darkDarker);
-	color: var(--lightDarker);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: var(--fontUltraSmall);
+#mainNav .nav-link::after {
+	background-color: var(--blurple1);
+	content: "";
+	width: 0;
+	height: 2px;
+	left: 0;
+	bottom: 0;
+	transition: width 350ms ease;
+	position: absolute;
+}
+  
+#mainNav .nav-link:hover::after {
+	width: 100%;
 }
 
-/* text */
+/* -------------------------
 
-.lead {
-	font-size: var(--fontMedium);
-	font-weight: 500;
-	text-align: center;
-	color: var(--lightLighter);
+ABOUT PAGE
+
+------------------------- */
+
+#about {
+    width: 100%;
+    background-color: var(--dark1);
+}
+
+/* -------------------------
+
+WORKS PAGE
+
+------------------------- */
+
+#works {
+    width: 100%;
+    background-color: var(--dark2);
+}
+
+
+/* -------------------------
+
+CONTACT PAGE
+
+------------------------- */
+
+#contact {
+    width: 100%;
+    background-color: var(--dark1);
 }
 
 /* contact form */
+
+details {
+	border: 2px solid var(--light3);
+	padding: 16px;
+	transition: background-color 500ms ease;
+}
+
+details[open] {
+	background-color: var(--dark1);
+	transition: background-color 500ms ease;
+}
+
+summary {
+	user-select: none;
+}
 
 form {
 	margin-top: 16px;
 }
 
 label {
-	font-family: 'Lato';
 	font-size: var(--fontUltraSmall);
 	margin-bottom: 6px;
 	font-weight: 500;
 	user-select: none;
-	color: var(--lightRegular);
+	color: var(--light2);
 }
 
 /* for the following, '#contact' selector is used to override assigned bootstrap 'form-control' class (specificity) */
+
 #contact input, #contact textarea {
-	background-color: var(--darkRegular);
-	color: var(--lightLighter);
-	border: 2px solid var(--darkDarker);
+	background-color: var(--dark2);
+	color: var(--light1);
+	border: 2px solid var(--dark3);
 }
 
 #contact .form-row {
@@ -266,68 +334,27 @@ label {
 }
 
 #contact input::placeholder, #contact textarea::placeholder {
-    color: var(--lightDarker);
+    color: var(--light3);
 }
 
 #contact textarea {
 	margin-bottom: 12px;
 }
 
-/* buttons */
+/* -------------------------
 
-@keyframes gradientAnimation {
-	0% {
-		background-position: left;
-	}
-	100% {
-		background-position: right;
-	}
-}
+BOOTSTRAP MODALS
 
-button, .button {
-	background: var(--gradient);
-	background-size: 300%;
-	color: var(--lightLighter);
-	font-family: 'Lato';
-	font-size: var(--fontUltraSmall);
-	padding: 16px 32px;
-	margin: 12px 0;
-	border-radius: 42px;
-	border: none;
-	text-transform: uppercase;
-	width: 10%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+------------------------- */
 
-button:hover {
-	opacity: 0.8;
-	transition: opacity 100ms ease-in;
-	background: var(--gradient);
-	background-size: 300%;
-	animation: gradientAnimation 15s infinite alternate;
-}
-
-button:active {
-	opacity: 0.7;
-	transition: opacity 100ms ease-in;
-}
-
-button:focus {
-    outline: none;
-}
-
-/* submit modal (opened via js) */
+/* contact form submission */
 
 .modal-header {
-	border-bottom: 2px solid var(--blurpleLight);
+	border-bottom: 2px solid var(--blurple1);
 }
 
 .modal-title {
 	font-size: var(--fontMedium);
-	font-family: 'Roboto Slab';
-	font-weight: 500;
 }
 
 .modal-body {
@@ -337,51 +364,16 @@ button:focus {
 }
 
 #submitModal .modal-content {
-	background-color: var(--darkLighter);
-	color: var(--lightLighter);
-	border: 2px solid var(--blurpleLight);
+	background-color: var(--dark1);
+	color: var(--light1);
+	border: 2px solid var(--blurple1);
 }
 
 .modal-footer {
-	border-top: 2px solid var(--blurpleLight);
+	border-top: 2px solid var(--blurple1);
 	margin: 6px 0;
 }
 
 #modalCloseButton {
 	width: 100%;
-}
-
-/* theme toggler */
-
-#themeToggler {
-	background: none;
-	width: 12px;
-	border-radius: 50%;
-	position: absolute;
-	left: 90%;
-}
-
-#themeToggler img {
-	height: 24px;
-	opacity: 0.8;
-	user-select: none;
-}
-
-#themeToggler:hover {
-	cursor: pointer;
-	opacity: 0.7;
-	transition: opacity 100ms ease-in;
-}
-
-#themeToggler:active {
-	opacity: 0.6;
-	transition: opacity 100ms ease-in;
-}
-
-.filterLight {
-	filter: invert(91%) sepia(0%) saturate(110%) hue-rotate(178deg) brightness(88%) contrast(98%);
-}
-
-.filterDark {
-	filter: invert(0%) sepia(6%) saturate(28%) hue-rotate(119deg) brightness(72%) contrast(76%);
 }
