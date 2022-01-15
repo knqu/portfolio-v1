@@ -65,9 +65,6 @@ CUSTOM CSS
 
 :root {
 	/* colors */
-    --blurple1:#6492F5;
-	--blurple2:#666cde;
-    --blue1: #395788;
 	--light1:#dfdfdf;
 	--light2:#c9c9c9;
     --light3:#a3a2a2;
@@ -92,8 +89,12 @@ CUSTOM CSS
 	--fontUltraLarge: 72px;
 }
 
+h1::selection, .lead::selection {
+	background-color: #7193c9;
+}
+
 ::selection {
-	background-color: var(--blue1);
+	background-color: #2f599c;
 }
 
 ::-webkit-scrollbar {
@@ -124,8 +125,18 @@ p {
 	color: var(--light2);
 }
 
+/* sections */
+
 #about, #works, #contact {
 	padding: 64px;
+}
+
+#about, #contact {
+    background-color: var(--dark1);
+}
+
+#works {
+    background-color: var(--dark2);
 }
 
 h2 {
@@ -154,7 +165,7 @@ button, .button {
 	font-size: var(--fontUltraSmall);
 	padding: 16px 32px;
 	margin: 12px 0;
-	border: 1px solid var(--light2);
+	border: 2px solid var(--light2);
 	text-transform: uppercase;
 	width: 20%;
 	display: flex;
@@ -185,27 +196,27 @@ h1 {
 	font-size: var(--fontUltraLarge);
 	text-align: center;
     font-weight: 700;
-    font-size: var(--fontUltraLarge);
+	color: var(--dark2);
 }
 
 .lead {
 	font-size: var(--fontMedium);
 	font-weight: 300;
 	text-align: center;
-	color: var(--light1);
     margin-top: 24px;
+	color: var(--dark2);
 }
 
 #landing {
 	height: 100vh;
-	background: url(images/sky.jpg);
+	background: url(images/sunset.jpg); /* Photo by Diego PH on Unsplash */
 	background-size: cover;
     display: flex;
     flex-direction: column;
 }
 
 #landingBox {
-    border: 3px solid rgba(223, 223, 223, 0.8);
+	border: 3px solid var(--dark2);
     height: 60vh;
     width: 60vh;
     display: flex;
@@ -222,7 +233,6 @@ h1 {
 	justify-content: center;
 	align-items: center;
     background: none;
-    opacity: 0.9;
 }
 
 #mainNav .nav-item {
@@ -230,17 +240,17 @@ h1 {
 	user-select: none;
 	display: flex;
 	align-items: center;
+	color: var(--dark2);
 }
 
 #mainNav .nav-link {
 	margin: 16px;
-    color: var(--light2);
 	cursor: pointer;
 	position: relative;
 }
 
 #mainNav .nav-link::after {
-	background-color: var(--blurple1);
+	background-color: var(--dark1);
 	content: "";
 	width: 0;
 	height: 2px;
@@ -256,35 +266,11 @@ h1 {
 
 /* -------------------------
 
-ABOUT PAGE
-
-------------------------- */
-
-#about {
-    width: 100%;
-    background-color: var(--dark1);
-}
-
-/* -------------------------
-
-WORKS PAGE
-
-------------------------- */
-
-#works {
-    width: 100%;
-    background-color: var(--dark2);
-}
-
-
-/* -------------------------
-
 CONTACT PAGE
 
 ------------------------- */
 
 #contact {
-    width: 100%;
     background-color: var(--dark1);
 }
 
@@ -350,7 +336,7 @@ BOOTSTRAP MODALS
 /* contact form submission */
 
 .modal-header {
-	border-bottom: 2px solid var(--blurple1);
+	border-bottom: 2px solid var(--light3);
 }
 
 .modal-title {
@@ -366,11 +352,11 @@ BOOTSTRAP MODALS
 #submitModal .modal-content {
 	background-color: var(--dark1);
 	color: var(--light1);
-	border: 2px solid var(--blurple1);
+	border: 2px solid var(--light3);
 }
 
 .modal-footer {
-	border-top: 2px solid var(--blurple1);
+	border-top: 2px solid var(--light3);
 	margin: 6px 0;
 }
 

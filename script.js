@@ -59,3 +59,18 @@ worksNavLink.addEventListener('click', function () {
 contactNavLink.addEventListener('click', function () {
     contact.scrollIntoView();
 });
+
+// animations
+
+window.onload = function () {
+    gsap.from('#mainNav', {
+        duration: 1.5,
+        y: '-100%',
+        ease: 'bounce'
+    })
+
+    gsap.from('#landingBox', {
+        duration: 2,
+        opacity: 0
+    })
+}
