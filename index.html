@@ -15,9 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Days+One&family=Titillium+Web:wght@300;400;600;700&display=swap"
         rel="stylesheet">
 
     <!-- custom css -->
@@ -37,7 +35,7 @@
             }
 
             #mainNav .navbar-nav {
-                display: none;
+                display: none !important;
             }
 
             details noscript p {
@@ -45,10 +43,11 @@
             }
 
             #jsDisabled p {
-                color: #dfdfdf;
+                color: #1f1f1f;
                 font-family: 'Titillium Web';
                 font-weight: 500;
                 margin-top: 5vh;
+                text-align: center;
             }
         </style>
     </noscript>
@@ -59,7 +58,7 @@
     <section id="landing">
         <!-- navbar -->
         <nav class="mainNav navbar navbar-expand-lg" id="mainNav">
-            <div class="navbar-nav">
+            <div class="navbar-nav collapse navbar-collapse">
                 <a class="nav-item nav-link" id="homeNavLink">HOME</a>
                 <p class="nav-item">|</p>
                 <a class="nav-item nav-link" id="aboutNavLink">ABOUT</a>
@@ -77,8 +76,10 @@
         </nav>
 
         <div id="landingBox">
-            <h1>KEVIN QU</h1>
-            <p class="lead">computer science student</p>
+            <div id="landingBoxInner">
+                <h1>KEVIN QU</h1>
+                <p class="lead">computer science student</p>
+            </div>
         </div>
     </section>
 
