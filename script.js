@@ -41,11 +41,7 @@ details.addEventListener('toggle', function () {
 // uses javascript instead of anchor tag to circumvent url change
 
 homeNavLink.addEventListener('click', function () {
-    if (window.scrollY === 0) { // if user is at top of page, reload
-        location.reload();
-    } else { // other, scroll to top of page
-        window.scrollTo(0, 0);
-    }
+    location.reload();
 });
 
 aboutNavLink.addEventListener('click', function () {

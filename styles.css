@@ -71,22 +71,13 @@ CUSTOM CSS
     --dark1:#2b2b2b;
     --dark2:#1f1f1f;
 	--dark3:#121212;
-
-	/* linear gradient */
-	--gradient: linear-gradient(45deg, 
-		#8a66de,
-		#666cde, 
-		#6492F5,
-		#64b4f5,
-		#0fc4d1,
-		#0fd183);
 	
 	/* font sizes */
 	--fontUltraSmall: 16px;
 	--fontSmall: 24px;
 	--fontMedium: 38px;
 	--fontLarge: 50px;
-	--fontUltraLarge: 72px;
+	--fontUltraLarge: 92px;
 }
 
 h1::selection, .lead::selection, #jsDisabled p::selection {
@@ -199,47 +190,71 @@ LANDING PAGE
 
 h1 {
 	font-size: var(--fontUltraLarge);
-	text-align: center;
     font-weight: 700;
 	color: var(--dark2);
 }
 
 .lead {
-	font-size: var(--fontMedium);
+	font-size: var(--fontLarge);
 	font-weight: 300;
-	text-align: center;
     margin-top: 24px;
 	color: var(--dark2);
+	user-select: none;
+	display: flex;
+	justify-content: left;
+}
+
+.lead div {
+    overflow: hidden;
+    position: relative;
+    float: right;
+	height: 65px;
+	padding-top: 10px;
+	margin-top: -10px;
+}
+
+.lead li {
+    display: block;
+	padding: 0 10px;
+	height: 45px;
+	margin-bottom: 45px;
+}
+
+.flipText {
+	animation: flipText 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@keyframes flipText {
+    0% { margin-top: -360px; }
+    5% { margin-top: -270px; }
+    25% { margin-top: -270px; }
+    30% { margin-top: -180px; }
+    50% { margin-top: -180px; }
+    55% { margin-top: -90px; }
+    75% { margin-top: -90px; }
+    80% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
 }
 
 #landing {
 	height: 100vh;
-	background: url(images/sunset.jpg); /* Photo by Diego PH on Unsplash */
-	background-size: cover;
+	background: linear-gradient(180deg, rgba(197,199,247,1) 0%, rgba(255,214,174,1) 100%);
     display: flex;
 	align-items: center;
     flex-direction: column;
 }
 
 #landingBox {
-	border: 3px solid var(--dark3);
-    height: 60vh;
-    width: 60vh;
     position: absolute;
+	width: 85%;
     top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    padding: 10px;
-}
-
-#landingBoxInner {
-	border: 2px solid var(--dark2);
-	height: 100%;
-	display: flex;
+    display: flex;
     justify-content: center;
     flex-direction: column;
-	padding: 24px;
 }
 
 /* navbar */
@@ -249,6 +264,13 @@ h1 {
 	justify-content: center;
 	align-items: center;
     background: none;
+	background-color: rgba(255, 255, 255, 0.2);
+	width: 100%;
+}
+
+#mainNav .navbar-nav {
+	display: flex;
+	justify-content: center;
 }
 
 #mainNav .nav-item {
