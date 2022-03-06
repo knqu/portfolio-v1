@@ -60,13 +60,12 @@ contactNavLink.addEventListener('click', function () {
 
 window.onload = function () {
     gsap.from('#mainNav', {
-        duration: 2,
-        y: '-100%',
-        ease: 'bounce'
-    })
-
-    gsap.from('#landingBox', {
         duration: 3,
         opacity: 0
-    })
-}
+    });
+
+    gsap.from('#landingText', {
+        duration: 3,
+        opacity: 0
+    });
+};

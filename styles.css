@@ -75,9 +75,9 @@ CUSTOM CSS
 	/* font sizes */
 	--fontUltraSmall: 16px;
 	--fontSmall: 24px;
-	--fontMedium: 38px;
-	--fontLarge: 50px;
-	--fontUltraLarge: 92px;
+	--fontMedium: 36px;
+	--fontLarge: 42px;
+	--fontUltraLarge: 78px;
 }
 
 h1::selection, .lead::selection, #jsDisabled p::selection {
@@ -105,7 +105,7 @@ html {
 }
 
 body {
-	font-family: 'Titillium Web';
+	font-family: 'Didact Gothic';
 	font-size: var(--fontSmall);
 	color: var(--light1);
 	background-color: var(--dark2);
@@ -161,7 +161,7 @@ button, .button {
 	font-weight: 500;
 	padding: 16px 32px;
 	margin: 12px 0;
-	border: 2px solid var(--light2);
+	border: 1px solid var(--light2);
 	text-transform: uppercase;
 	width: 15%;
 	display: flex;
@@ -191,14 +191,14 @@ LANDING PAGE
 h1 {
 	font-size: var(--fontUltraLarge);
     font-weight: 700;
-	color: var(--dark2);
+	color: var(--light2);
 }
 
 .lead {
 	font-size: var(--fontLarge);
 	font-weight: 300;
     margin-top: 24px;
-	color: var(--dark2);
+	color: var(--light2);
 	user-select: none;
 	display: flex;
 	justify-content: left;
@@ -239,56 +239,50 @@ h1 {
 
 #landing {
 	height: 100vh;
-	background: linear-gradient(180deg, rgba(197,199,247,1) 0%, rgba(255,214,174,1) 100%);
-    display: flex;
-	align-items: center;
-    flex-direction: column;
+	background: url(images/tech.jpg); /* Photo by Ramón Salinero on Unsplash */
+	background-size: cover;
 }
 
-#landingBox {
+#landingText {
     position: absolute;
-	width: 85%;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+	margin-left: 64px;
+	margin-top: 30vh;
 }
 
 /* navbar */
 
 #mainNav {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-    background: none;
-	background-color: rgba(255, 255, 255, 0.2);
 	width: 100%;
+	padding: 24px 64px;
 }
 
 #mainNav .navbar-nav {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 }
 
-#mainNav .nav-item {
-	margin: 16px 0;
-	user-select: none;
+#navOptions {
 	display: flex;
-	align-items: center;
-	color: var(--dark2);
+	justify-content: space-between;
 }
 
 #mainNav .nav-link {
-	margin: 16px;
+	padding-left: 0;
+	padding-right: 0;
+	margin-right: 24px;
 	cursor: pointer;
 	position: relative;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	color: var(--light2);
+	font-weight: 500;
 }
 
 #mainNav .nav-link::after {
-	background-color: var(--dark1);
+	background-color: var(--light3);
 	content: "";
 	width: 0;
 	height: 2px;
@@ -311,7 +305,7 @@ CONTACT PAGE
 /* contact form */
 
 details {
-	border: 2px solid var(--light2);
+	border: 1px solid var(--light2);
 	padding: 16px;
 	transition: background-color 500ms ease;
 }
