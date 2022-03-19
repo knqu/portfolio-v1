@@ -80,12 +80,8 @@ CUSTOM CSS
 	--fontUltraLarge: 78px;
 }
 
-h1::selection, .lead::selection, #jsDisabled p::selection {
-	background-color: #7193c9;
-}
-
 ::selection {
-	background-color: #2f599c;
+	background-color: #b46834;
 }
 
 ::-webkit-scrollbar {
@@ -271,7 +267,7 @@ h1 {
 #mainNav .nav-link {
 	padding-left: 0;
 	padding-right: 0;
-	margin-right: 24px;
+	margin-right: 36px;
 	cursor: pointer;
 	position: relative;
 	user-select: none;

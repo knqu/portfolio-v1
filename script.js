@@ -59,13 +59,9 @@ contactNavLink.addEventListener('click', function () {
 // animations
 
 window.onload = function () {
-    gsap.from('#mainNav', {
-        duration: 3,
-        opacity: 0
-    });
-
     gsap.from('#landingText', {
         duration: 3,
-        opacity: 0
+        y: -100,
+        ease: 'elastic'
     });
 };
