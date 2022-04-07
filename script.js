@@ -1,3 +1,8 @@
+// preloader selectors
+const preloader = document.querySelector('#preloader');
+const content = document.querySelector('#content');
+const landingText = document.querySelector('#landingText');
+
 // contact section/form selectors
 const form = document.querySelector('form');
 const details = document.querySelector('details');
@@ -14,6 +19,16 @@ const about = document.querySelector('#about');
 const works = document.querySelector('#works');
 const contact = document.querySelector('#contact');
 
+// preloader & page animations
+
+content.style.opacity = 0;
+window.onload = function () {
+    const timeline = gsap.timeline();
+    timeline
+        .to(preloader, { duration: 2, opacity: 0 })
+        .to(content, { duration: 2, opacity: 1 })
+        .from(landingText, { duration: 3, y: -100, ease: 'elastic' }, 2);
+};
 // form submission
 // blocks default behavior, closes details tag, shows bootstrap submit modal, scrolls to top, resets form
 
@@ -55,13 +70,3 @@ worksNavLink.addEventListener('click', function () {
 contactNavLink.addEventListener('click', function () {
     contact.scrollIntoView();
 });
-
-// animations
-
-window.onload = function () {
-    gsap.from('#landingText', {
-        duration: 3,
-        y: -100,
-        ease: 'elastic'
-    });
-};
