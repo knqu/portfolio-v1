@@ -7,6 +7,7 @@ const landingText = document.querySelector('#landingText');
 const form = document.querySelector('form');
 const details = document.querySelector('details');
 const summary = document.querySelector('summary');
+const submitModal = new bootstrap.Modal(document.querySelector('#submitModal'));
 
 // nav link selectors
 const homeNavLink = document.querySelector('#homeNavLink');
@@ -35,7 +36,7 @@ window.onload = function () {
 form.addEventListener('submit', function (event) {
     event.preventDefault();
     details.removeAttribute('open');
-    $('#submitModal').modal('show'); // not sure if there's a non-jquery alternative, sourced this from bootstrap docs
+    submitModal.show();
     window.scrollTo(0, 0);
     form.reset();
 });

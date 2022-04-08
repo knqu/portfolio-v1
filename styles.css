@@ -108,8 +108,14 @@ body {
 	background-color: var(--dark2);
 }
 
-h1, h2 {
-	font-family: 'Days One';
+h1 {
+	font-family: 'Rubik';
+	font-weight: 900;
+}
+
+h2 {
+	font-family: 'Rubik';
+	font-weight: 700;
 }
 
 p {
@@ -135,6 +141,20 @@ h2 {
 	font-size: var(--fontLarge);
 	font-weight: 600;
 	margin-bottom: 12px;
+	position: relative;
+	overflow: hidden;
+}
+
+h2:after {
+	display: inline-block;
+	content: "";
+	height: 4px;
+	background: var(--light2);
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	margin-top: -2px;
+	margin-left: 16px;
 }
 
 /* footer */
@@ -346,9 +366,9 @@ CONTACT PAGE
 /* contact form */
 
 details {
-	border: 1px solid var(--light2);
-	padding: 16px;
+	padding: 16px 24px;
 	transition: background-color 500ms ease;
+	background-color: var(--dark3);
 }
 
 details[open] {
@@ -366,7 +386,7 @@ form {
 
 label {
 	font-size: var(--fontUltraSmall);
-	margin-bottom: 6px;
+	margin: 0 0 6px 2px;
 	font-weight: 500;
 	user-select: none;
 	color: var(--light2);
@@ -374,26 +394,38 @@ label {
 
 /* for the following, '#contact' selector is used to override assigned bootstrap 'form-control' class (specificity) */
 
-#contact input, #contact textarea {
+#contact input, #message {
 	background-color: var(--dark2);
 	color: var(--light1);
 	border: 2px solid var(--dark3);
 }
 
-#contact .form-row {
+#contact .row {
 	margin-bottom: 10px;
 }
 
-#contact .form-row:last-of-type {
+#contact .row:last-of-type {
 	margin-bottom: 0;
 }
 
-#contact input::placeholder, #contact textarea::placeholder {
+#contact input::placeholder, #message::placeholder {
 	color: var(--light3);
 }
 
-#contact textarea {
+#message {
 	margin-bottom: 12px;
+}
+
+#contact hr {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	height: 2px;
+	background-color: var(--light3);
+}
+
+#buttonWrap {
+	display: flex;
+	justify-content: center;
 }
 
 /* -------------------------
@@ -453,7 +485,7 @@ PRELOADER
 	color: var(--light1);
 	letter-spacing: 4px;
 	user-select: none;
-	font-family: 'Days One';
+	font-family: 'Rubik';
 }
 
 #preloader::before, #preloader::after {
