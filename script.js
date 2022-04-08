@@ -21,7 +21,6 @@ const contact = document.querySelector('#contact');
 
 // preloader & page animations
 
-content.style.opacity = 0;
 window.onload = function () {
     const timeline = gsap.timeline();
     timeline
@@ -29,6 +28,7 @@ window.onload = function () {
         .to(content, { duration: 2, opacity: 1 })
         .from(landingText, { duration: 3, y: -100, ease: 'elastic' }, 2);
 };
+
 // form submission
 // blocks default behavior, closes details tag, shows bootstrap submit modal, scrolls to top, resets form
 
