@@ -71,7 +71,7 @@ CUSTOM CSS
 	--dark1: #2b2b2b;
 	--dark2: #1f1f1f;
 	--dark3: #121212;
-	--secondary: #1e8d80;
+	--secondary: #606aa9;
 
 	/* font sizes */
 	--fontUltraSmall: 16px;
@@ -155,6 +155,18 @@ h2:after {
 	top: 50%;
 	margin-top: -2px;
 	margin-left: 16px;
+}
+
+p a {
+	color: var(--secondary);
+	text-decoration: none;
+}
+
+p a:hover, p a:active, p a:focus {
+	color: var(--light1);
+	background-color: var(--secondary);
+	text-decoration: none;
+	transition: all 100ms ease;
 }
 
 /* footer */
@@ -369,6 +381,7 @@ details {
 	padding: 16px 24px;
 	transition: background-color 500ms ease;
 	background-color: var(--dark3);
+	border: 2px solid #000;
 }
 
 details[open] {
@@ -523,4 +536,60 @@ PRELOADER
 		height: 30px;
 		width: 15px
 	}
+}
+
+/* -------------------------
+
+BOOTSTRAP CARDS
+
+------------------------- */
+
+#about .card {
+	background-color: var(--dark2);
+	border: none;
+}
+
+#about .cardInner {
+	background-color: var(--dark3);
+	padding: 24px;
+	border: 2px solid #000;
+	margin-top: 24px;
+	border-radius: 0;
+	height: 100%;
+}
+
+#about .card:nth-of-type(1) .cardInner {
+	margin-right: 16px;
+}
+
+#works .card {
+	background-color: var(--dark2);
+	padding: 24px;
+	border: 2px solid #000;
+	margin-top: 24px;
+	border-radius: 0;
+}
+
+/* -------------------------
+
+SKILL BARS
+
+------------------------- */
+
+.progBarLabel {
+	font-size: var(--fontUltraSmall);
+	font-weight: 500;
+	color: var(--light1);
+	margin-bottom: 2px;
+}
+
+.progress {
+	margin-bottom: 8px;
+	height: 6px;
+	background-color: var(--light1);
+	border-radius: 0;
+}
+
+.progress-bar {
+	background-color: var(--secondary);
 }
