@@ -72,6 +72,7 @@ CUSTOM CSS
 	--dark2: #1f1f1f;
 	--dark3: #121212;
 	--secondary: #606aa9;
+	--success: #8df18d;
 
 	/* font sizes */
 	--fontUltraSmall: 16px;
@@ -108,14 +109,18 @@ body {
 	background-color: var(--dark2);
 }
 
-h1 {
-	font-family: 'Rubik';
-	font-weight: 900;
-}
-
 h2 {
 	font-family: 'Rubik';
 	font-weight: 700;
+}
+
+
+h3 {
+	font-size: var(--fontUltraSmall);
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: var(--light1);
+	font-family: 'Rubik';
 }
 
 p {
@@ -167,6 +172,12 @@ p a:hover, p a:active, p a:focus {
 	background-color: var(--secondary);
 	text-decoration: none;
 	transition: all 100ms ease;
+}
+
+hr {
+	margin: 16px 0;
+	background-color: var(--light3);
+	height: 2px !important;
 }
 
 /* footer */
@@ -232,8 +243,9 @@ LANDING PAGE
 ------------------------- */
 
 h1 {
+	font-family: 'Rubik';
+	font-weight: 800;
 	font-size: var(--fontUltraLarge);
-	font-weight: 700;
 	color: var(--light2);
 }
 
@@ -382,6 +394,7 @@ details {
 	transition: background-color 500ms ease;
 	background-color: var(--dark3);
 	border: 2px solid #000;
+	border-radius: 8px;
 }
 
 details[open] {
@@ -431,9 +444,6 @@ label {
 
 #contact hr {
 	margin-top: 24px;
-	margin-bottom: 16px;
-	height: 2px;
-	background-color: var(--light3);
 }
 
 #buttonWrap {
@@ -450,29 +460,30 @@ BOOTSTRAP MODALS
 /* contact form submission */
 
 .modal-header {
-	border-bottom: 2px solid var(--light3);
+	justify-content: center;
 }
 
 .modal-title {
 	font-size: var(--fontMedium);
-	font-family: 'Didact Gothic';
+	color: var(--success);
 }
 
 .modal-body {
 	padding-top: 24px;
-	padding-bottom: 24px;
+	padding-bottom: 0;
 	font-size: var(--fontSmall);
+	text-align: center;
 }
 
 #submitModal .modal-content {
 	background-color: var(--dark1);
 	color: var(--light1);
-	border: 2px solid var(--light3);
 }
 
 .modal-footer {
-	border-top: 2px solid var(--light3);
-	margin: 6px 0;
+	border-top: none;
+	margin-top: 4px;
+	margin-bottom: 8px;
 }
 
 #modalCloseButton {
@@ -550,12 +561,15 @@ BOOTSTRAP CARDS
 }
 
 #about .cardInner {
-	background-color: var(--dark3);
+	/* background-color: var(--dark3); */
 	padding: 24px;
 	border: 2px solid #000;
 	margin-top: 24px;
 	border-radius: 0;
 	height: 100%;
+
+	border-radius: 8px;
+	background-color: var(--dark1);
 }
 
 #about .card:nth-of-type(1) .cardInner {
@@ -567,7 +581,7 @@ BOOTSTRAP CARDS
 	padding: 24px;
 	border: 2px solid #000;
 	margin-top: 24px;
-	border-radius: 0;
+	border-radius: 8px;
 }
 
 /* -------------------------
