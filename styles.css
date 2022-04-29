@@ -393,7 +393,7 @@ details {
 	padding: 16px 24px;
 	transition: background-color 500ms ease;
 	background-color: var(--dark3);
-	border: 2px solid #000;
+	border: 1px solid #000;
 	border-radius: 8px;
 }
 
@@ -556,20 +556,18 @@ BOOTSTRAP CARDS
 ------------------------- */
 
 #about .card {
-	background-color: var(--dark2);
+	background: none;
 	border: none;
 }
 
 #about .cardInner {
-	/* background-color: var(--dark3); */
-	padding: 24px;
-	border: 2px solid #000;
+	padding: 28px;
+	border: 1px solid #323232;
 	margin-top: 24px;
 	border-radius: 0;
 	height: 100%;
-
 	border-radius: 8px;
-	background-color: var(--dark1);
+	background: #232323;
 }
 
 #about .card:nth-of-type(1) .cardInner {
@@ -577,9 +575,9 @@ BOOTSTRAP CARDS
 }
 
 #works .card {
-	background-color: var(--dark2);
-	padding: 24px;
-	border: 2px solid #000;
+	background: #2f2f2f;
+	padding: 28px;
+	border: 1px solid #3a3a3a;
 	margin-top: 24px;
 	border-radius: 8px;
 }
