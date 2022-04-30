@@ -104,6 +104,7 @@ html {
 
 body {
 	font-family: 'Didact Gothic';
+	font-kerning: none;
 	font-size: var(--fontSmall);
 	color: var(--light1);
 	background-color: var(--dark2);
