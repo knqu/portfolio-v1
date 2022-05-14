@@ -424,7 +424,7 @@ label {
 #contact input, #message {
 	background-color: var(--dark2);
 	color: var(--light1);
-	border: 2px solid var(--dark3);
+	border: 1px solid var(--dark3);
 }
 
 #contact .row {

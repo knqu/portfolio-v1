@@ -24,6 +24,7 @@ const contact = document.querySelector('#contact');
 // preloader & page animations
 
 window.onload = function () {
+    subPreloaderText.style.display = 'none';
     const timeline = gsap.timeline();
     timeline
         .to(preloader, { duration: 2, opacity: 0 })
