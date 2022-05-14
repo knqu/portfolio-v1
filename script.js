@@ -1,5 +1,6 @@
 // preloader selectors
 const preloader = document.querySelector('#preloader');
+const subPreloaderText = document.querySelector('#subPreloaderText');
 const content = document.querySelector('#content');
 const landingText = document.querySelector('#landingText');
 
@@ -29,6 +30,12 @@ window.onload = function () {
         .to(content, { duration: 2, opacity: 1 })
         .from(landingText, { duration: 3, y: -100, ease: 'elastic' }, 2);
 };
+
+setTimeout(function () {
+    if (content.style.opacity == 0) {
+        subPreloaderText.innerText = 'Please check your connection and that your antivirus is not blocking cdn.cloudflare.com';
+    }
+}, 4000);
 
 // form submission
 // blocks default behavior, closes details tag, shows bootstrap submit modal, scrolls to top, resets form
