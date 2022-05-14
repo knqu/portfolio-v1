@@ -393,8 +393,8 @@ CONTACT PAGE
 details {
 	padding: 16px 24px;
 	transition: background-color 500ms ease;
-	background-color: var(--dark3);
-	border: 1px solid #000;
+	background: #232323;
+	border: 1px solid #323232;
 	border-radius: 8px;
 }
 
