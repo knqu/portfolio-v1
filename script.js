@@ -30,6 +30,10 @@ window.onload = function () {
         .to(preloader, { duration: 2, opacity: 0 })
         .to(content, { duration: 2, opacity: 1 })
         .from(landingText, { duration: 3, y: -100, ease: 'elastic' }, 2);
+    setTimeout(function () {
+        preloader.remove();
+        subPreloaderText.remove();
+    }, 2000);
 };
 
 setTimeout(function () {
