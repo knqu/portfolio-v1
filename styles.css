@@ -231,10 +231,10 @@ button:hover, button:focus {
 	transition: all 200ms ease;
 }
 
-button:focus {
-	outline: none;
+button:active {
 	background-color: var(--light3);
-	color: var(--dark1);
+	border: 1px solid var(--light3);
+	transition: all 200ms ease;
 }
 
 /* -------------------------
