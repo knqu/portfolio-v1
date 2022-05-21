@@ -1,6 +1,7 @@
 // preloader selectors
 const preloader = document.querySelector('#preloader');
 const subPreloaderText = document.querySelector('#subPreloaderText');
+const body = document.querySelector('body');
 const content = document.querySelector('#content');
 const landingText = document.querySelector('#landingText');
 
@@ -31,6 +32,8 @@ window.onload = function () {
         .to(content, { duration: 2, opacity: 1 })
         .from(landingText, { duration: 3, y: -100, ease: 'elastic' }, 2);
     setTimeout(function () {
+        body.style.height = '100%';
+        body.style.overflow = 'visible';
         preloader.remove();
         subPreloaderText.remove();
     }, 2000);
