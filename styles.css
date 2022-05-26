@@ -75,7 +75,7 @@ CUSTOM CSS
 	--success: #8df18d;
 
 	/* font sizes */
-	--fontUltraSmall: 16px;
+	--fontUltraSmall: 18px;
 	--fontSmall: 24px;
 	--fontMedium: 36px;
 	--fontLarge: 42px;
@@ -324,7 +324,7 @@ h1 {
 
 #landing {
 	height: 100vh;
-	background: url(images/tech.jpg);
+	background-image: url(images/tech.jpg);
 	/* Photo by Ramón Salinero on Unsplash */
 	background-size: cover;
 }
@@ -627,11 +627,49 @@ BOOTSTRAP CARDS
 }
 
 #works .card {
-	background: #2f2f2f;
+	background: none;
+	border: none;
+}
+
+#works .cardInner {
+	height: 100%;
+	background: #232323;
 	padding: 28px;
-	border: 1px solid #3a3a3a;
+	border: 1px solid #323232;
 	margin-top: 24px;
 	border-radius: 8px;
+}
+
+#works h3 {
+	font-size: var(--fontSmall);
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+
+#works p {
+	font-size: var(--fontUltraSmall);
+}
+
+.thumbnail {
+	height: 256px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 16px;
+	border-radius: 8px;
+}
+
+#aftermath {
+	background-image: url(images/aftermath.png);
+}
+
+#trivia {
+	background-image: url(images/trivia.png);
+}
+
+#gpacalc {
+	background-image: url(images/gpacalc.png);
+	background-position: top left;
 }
 
 /* -------------------------
