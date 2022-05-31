@@ -71,19 +71,21 @@ CUSTOM CSS
 	--dark1: #2b2b2b;
 	--dark2: #1f1f1f;
 	--dark3: #121212;
-	--secondary: #606aa9;
+	--accent: #9299df;
 	--success: #8df18d;
+	--blurpleGradient: linear-gradient(90deg, rgba(133, 128, 219, 1) 0%, rgba(114, 205, 224, 1) 100%);
 
 	/* font sizes */
 	--fontUltraSmall: 18px;
 	--fontSmall: 24px;
 	--fontMedium: 36px;
 	--fontLarge: 42px;
-	--fontUltraLarge: 78px;
+	--fontUltraLarge: 92px;
 }
 
 ::selection {
-	background-color: var(--secondary);
+	background-color: var(--accent);
+	color: var(--dark1);
 }
 
 ::-webkit-scrollbar {
@@ -164,13 +166,13 @@ h2:after {
 }
 
 p a {
-	color: var(--secondary);
+	color: var(--accent);
 	text-decoration: none;
 }
 
 p a:hover, p a:active, p a:focus {
 	color: var(--light1);
-	background-color: var(--secondary);
+	background-color: var(--accent);
 	text-decoration: none;
 	transition: all 100ms ease;
 }
@@ -247,13 +249,19 @@ h1 {
 	font-family: 'Rubik';
 	font-weight: 800;
 	font-size: var(--fontUltraLarge);
-	color: var(--light2);
+	user-select: none;
+	background: var(--blurpleGradient);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 }
 
 .lead {
-	font-size: var(--fontLarge);
+	font-size: var(--fontMedium);
 	font-weight: 300;
-	margin-top: 24px;
+	margin-top: 10px;
 	color: var(--light2);
 	user-select: none;
 	display: flex;
@@ -538,7 +546,7 @@ PRELOADER
 
 #preloader:after {
 	content: '';
-	background: var(--secondary);
+	background: var(--accent);
 	width: 50px;
 	height: 160px;
 	display: block;
@@ -693,5 +701,5 @@ SKILL BARS
 }
 
 .progress-bar {
-	background-color: var(--secondary);
+	background: var(--blurpleGradient);
 }
