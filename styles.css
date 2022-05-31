@@ -76,8 +76,8 @@ CUSTOM CSS
 	--blurpleGradient: linear-gradient(90deg, rgba(133, 128, 219, 1) 0%, rgba(114, 205, 224, 1) 100%);
 
 	/* font sizes */
-	--fontUltraSmall: 18px;
-	--fontSmall: 24px;
+	--fontUltraSmall: 16px;
+	--fontSmall: 22px;
 	--fontMedium: 36px;
 	--fontLarge: 42px;
 	--fontUltraLarge: 92px;
