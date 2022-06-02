@@ -332,7 +332,7 @@ h1 {
 
 #landing {
 	height: 100vh;
-	background-image: url(images/plasma.jpg);
+	background-image: url(/img/plasma.jpg);
 	/* Photo by Ramón Salinero on Unsplash */
 	background-size: cover;
 }
@@ -668,15 +668,15 @@ BOOTSTRAP CARDS
 }
 
 #aftermath {
-	background-image: url(img/aftermath.png);
+	background-image: url(/img/aftermath.png);
 }
 
 #trivia {
-	background-image: url(img/trivia.png);
+	background-image: url(/img/trivia.png);
 }
 
 #gpacalc {
-	background-image: url(img/gpacalc.png);
+	background-image: url(/img/gpacalc.png);
 	background-position: top left;
 }
 
