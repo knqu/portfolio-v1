@@ -225,6 +225,7 @@ button, .button {
 	justify-content: center;
 	align-items: center;
 	outline: none;
+	border-radius: 4px;
 }
 
 button:hover, button:focus {
