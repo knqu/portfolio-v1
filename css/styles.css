@@ -134,7 +134,7 @@ p {
 /* sections */
 
 #about, #works, #contact {
-	padding: 64px;
+	padding: 64px 92px;
 }
 
 #about, #contact {
@@ -340,7 +340,7 @@ h1 {
 
 #landingText {
 	position: absolute;
-	margin-left: 64px;
+	margin-left: 92px;
 	margin-top: 30vh;
 }
 
@@ -350,7 +350,7 @@ h1 {
 	display: flex;
 	align-items: center;
 	width: 100%;
-	padding: 24px 64px;
+	padding: 24px 92px;
 }
 
 #mainNav .navbar-nav {
