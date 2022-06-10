@@ -165,12 +165,12 @@ h2:after {
 	margin-left: 16px;
 }
 
-p a {
+a {
 	color: var(--accent);
 	text-decoration: none;
 }
 
-p a:hover, p a:active, p a:focus {
+a:hover, p a:active, p a:focus {
 	color: var(--light1);
 	background-color: var(--accent);
 	text-decoration: none;
