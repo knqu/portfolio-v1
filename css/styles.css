@@ -79,9 +79,9 @@ CUSTOM CSS
 	/* font sizes */
 	--fontUltraSmall: 16px;
 	--fontSmall: 22px;
-	--fontMedium: 36px;
+	--fontMedium: 34px;
 	--fontLarge: 42px;
-	--fontUltraLarge: 92px;
+	--fontUltraLarge: 88px;
 }
 
 ::selection {
